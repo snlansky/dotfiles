@@ -3,22 +3,28 @@ dotfiles
 
 Dotfiles of my development environment. Working with Linux.
 
-Table Of Contents
------------------
-
-* [i3wm](#i3wm)
-* [tmux](#tmux)
-
 Deploy
 ------
 
 The deployment will overwrite your configuration file, be sure to backup your existing configuration.
 
+*   i3wm:
+
+    ```
+    $ ./deploy/i3wm.sh
+    ```
+
 *   tmux:
 
     ```
-    $ ./deploy/tmux
+    $ ./deploy/tmux.sh
     ```
+
+Table Of Contents
+-----------------
+
+* [i3wm](#i3wm)
+* [tmux](#tmux)
 
 i3wm
 ----
