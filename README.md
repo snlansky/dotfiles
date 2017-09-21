@@ -14,6 +14,12 @@ The deployment will overwrite your configuration file, be sure to backup your ex
     $ ./deploy/i3wm.sh
     ```
 
+*   zsh:
+
+    ```
+    $ ./deploy/zsh.sh && . ~/.zshrc
+    ```
+
 *   tmux:
 
     ```
@@ -24,6 +30,7 @@ Table Of Contents
 -----------------
 
 * [i3wm](#i3wm)
+* [zsh](#zsh)
 * [tmux](#tmux)
 
 i3wm
@@ -102,6 +109,16 @@ i3wm
 | resize: `j`      | 减小高度 |
 | resize: `k`      | 增大高度 |
 | resize: `Escape` | 退出 resize 模式（返回到 default 模式） |
+
+zsh
+----
+
+常用命令
+
+| command     | description |
+|:------------|:------------|
+| `alias`     | 查看别名列表 |
+| `zsh_stats` | 查看使用最频繁的命令 |
 
 tmux
 ----
