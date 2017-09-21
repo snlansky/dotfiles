@@ -45,6 +45,7 @@ i3wm
 | `$mod + Return`    | 启动终端 |
 | `$mod + d`         | 启动 dmenu 程序启动器 |
 | `$mod + q`         | 关闭窗口 |
+| `$mod + z`         | 锁屏 |
 | `$mod + Shift + c` | 重新加载配置文件 |
 | `$mod + Shift + r` | 重新启动 |
 | `$mod + Shift + e` | 退出 |

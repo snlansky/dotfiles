@@ -35,6 +35,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+q kill
 
+# i3lock with black color
+bindsym $mod+z exec "i3lock -c 000000"
+
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
