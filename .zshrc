@@ -43,28 +43,63 @@ export NVM_DIR="$HOME/.nvm"
 # Load autojump
 . /usr/share/autojump/autojump.sh
 
+# Little cat
+cat="
+              /\\_/\\
+            =( °w° )=
+              )   (  _     Nothing todo.
+             (__ __)//     Why don't you take a little break? \n"
+
 # A simple TODO list
 todo() {
     test -f $HOME/.todo || touch $HOME/.todo
     if [ $# = 0 ]
     then
-        cat -n $HOME/.todo
-    elif [ $1 = -c ]
+        if [[ ! -s $HOME/.todo ]]
+        then
+            echo $cat
+        else
+            cat -n $HOME/.todo
+        fi
+    elif [ $1 = -h ] || [ $1 = --help ]
     then
-        > $HOME/.todo
+        echo '\ntodo - a simple TODO list\n'
+        echo 'Usage: todo [-h] [content]'
+        echo 'Option:'
+        echo '    -h --help       Print usage'
+        echo 'Example:'
+        echo '    $ todo'
+        echo '    $ todo eat your own dog food'
+        echo '    $ todo --help\n'
     else
         echo $@ >> $HOME/.todo
     fi
 }
 
+# Finish TODO item
 ok() {
     test -f $HOME/.todo || touch $HOME/.todo
     if [ $# = 0 ]
     then
-        cat -n $HOME/.todo
-        echo -ne "----------------------------\nType a number to remove: "
-        read NUMBER
-        sed -ie ${NUMBER}d $HOME/.todo
+        if [[ ! -s $HOME/.todo ]]
+        then
+            echo $cat
+        else
+            cat -n $HOME/.todo
+            echo -ne "\n     Type a number to remove: "
+            read NUMBER
+            sed -ie ${NUMBER}d $HOME/.todo
+        fi
+    elif [ $1 = -h ] || [ $1 = --help ]
+    then
+        echo '\nok - finish TODO item\n'
+        echo 'Usage: ok [-h] [number]'
+        echo 'Option:'
+        echo '    -h --help       Print usage'
+        echo 'Example:'
+        echo '    $ ok'
+        echo '    $ ok 2'
+        echo '    $ ok --help\n'
     else
         sed -ie $1d $HOME/.todo
     fi
