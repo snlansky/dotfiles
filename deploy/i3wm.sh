@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-cp -rf .config/i3 ~/.config
+cp -rf .config/i3* ~/.config
