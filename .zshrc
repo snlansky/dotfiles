@@ -1,5 +1,14 @@
+###############################################################################
+# YOU FIRST NEED TO HAVE THESE PACKAGES INSTALLED:
+# 1. oh-my-zsh        https://github.com/robbyrussell/oh-my-zsh
+# 2. tmux             https://github.com/tmux/tmux
+# 3. nvm              https://github.com/creationix/nvm
+# 4. gvm              https://github.com/moovweb/gvm
+# 5. autojump         https://github.com/wting/autojump
+###############################################################################
+
 # Path to oh-my-zsh installation.
-export ZSH=/home/mwn/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 ZSH_THEME="robbyrussell"
@@ -38,7 +47,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # Load gvm
-[ -s "/home/mwn/.gvm/scripts/gvm" ] && \. "/home/mwn/.gvm/scripts/gvm"
+[ -s "$HOME/.gvm/scripts/gvm" ] && \. "$HOME/.gvm/scripts/gvm"
 
 # Load autojump
 . /usr/share/autojump/autojump.sh
@@ -50,7 +59,7 @@ cat="
               )   (  _     Nothing todo.
              (__ __)//     Why don't you take a little break? \n"
 
-# A simple TODO list
+# A simple todo list
 todo() {
     test -f $HOME/.todo || touch $HOME/.todo
     if [ $# = 0 ]
@@ -76,7 +85,7 @@ todo() {
     fi
 }
 
-# Finish TODO item
+# Finish todo item
 ok() {
     test -f $HOME/.todo || touch $HOME/.todo
     if [ $# = 0 ]
