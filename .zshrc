@@ -42,3 +42,30 @@ export NVM_DIR="$HOME/.nvm"
 
 # Load autojump
 . /usr/share/autojump/autojump.sh
+
+# A simple TODO list
+todo() {
+   test -f $HOME/.todo || touch $HOME/.todo
+   if test $# = 0
+   then
+           cat -n $HOME/.todo
+   elif test $1 = -c
+   then
+           > $HOME/.todo
+   else
+           echo $@ >> $HOME/.todo
+   fi
+}
+
+ok() {
+   test -f $HOME/.todo || touch $HOME/.todo
+   if test $# = 0
+   then
+           cat -n $HOME/.todo
+           echo -ne "----------------------------\nType a number to remove: "
+           read NUMBER
+           sed -ie ${NUMBER}d $HOME/.todo
+   else
+           sed -ie $1d $HOME/.todo
+   fi
+}
