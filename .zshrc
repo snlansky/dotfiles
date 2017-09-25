@@ -5,6 +5,7 @@
 # 3. nvm              https://github.com/creationix/nvm
 # 4. gvm              https://github.com/moovweb/gvm
 # 5. autojump         https://github.com/wting/autojump
+# 6. thefuck          https://github.com/nvbn/thefuck
 ###############################################################################
 
 # Path to oh-my-zsh installation.
@@ -51,6 +52,9 @@ export NVM_DIR="$HOME/.nvm"
 
 # Load autojump
 . /usr/share/autojump/autojump.sh
+
+# Load thefuck
+eval $(thefuck --alias)
 
 # Little cat
 cat="
@@ -112,4 +116,18 @@ ok() {
     else
         sed -ie $1d $HOME/.todo
     fi
+}
+
+# Determine size of a file or total size of a directory
+fs() {
+    if du -b /dev/null > /dev/null 2>&1; then
+        local arg=-sbh;
+    else
+        local arg=-sh;
+    fi
+    if [[ -n "$@" ]]; then
+        du $arg -- "$@";
+    else
+        du $arg .[^.]* ./*;
+    fi;
 }
