@@ -6,6 +6,7 @@
 # 4. gvm              https://github.com/moovweb/gvm
 # 5. autojump         https://github.com/wting/autojump
 # 6. thefuck          https://github.com/nvbn/thefuck
+# 7. polipo           https://github.com/jech/polipo
 ###############################################################################
 
 # Path to oh-my-zsh installation.
@@ -38,8 +39,8 @@ alias ns="npm start"
 alias sc="vi ~/.zshrc"
 alias scs=". ~/.zshrc"
 
-alias h="history | grep $*"
-alias ss="http_proxy=http://localhost:8123 $*"
+alias h="history | grep"
+alias ss="http_proxy=http://localhost:8123"
 
 # Source tmux configuration
 tmux source-file ~/.tmux.conf
