@@ -41,6 +41,7 @@ alias scs=". ~/.zshrc"
 
 alias h="history | grep"
 alias ss="http_proxy=http://localhost:8123"
+alias gg="ss go get -v"
 
 # Source tmux configuration
 tmux source-file ~/.tmux.conf
@@ -131,5 +132,27 @@ fs() {
         du $arg -- "$@";
     else
         du $arg .[^.]* ./*;
+    fi;
+}
+
+# Extract or unpack(uncompress) a compressed file
+x() {
+    if [ -f $1 ]; then
+        case $1 in
+            *.tar)       tar xvf $1;;
+            *.tar.bz2)   tar jxvf $1;;
+            *.tbz2)      tar jxvf $1;;
+            *.tar.gz)    tar zxvf $1;;
+            *.tgz)       tar zxvf $1;;
+            *.zip)       unzip -O gbk $1;;
+            *.gz)        gunzip $1;;
+            *.bz2)       bunzip2 $1;;
+            *.rar)       unrar e $1;;
+            *.Z)         uncompress $1;;
+            *.7z)        7z x $1;;
+            *)           echo "'$1' cannot be extracted via x()";
+        esac
+    else
+        echo "'$1' is not a valid file";
     fi;
 }
