@@ -39,6 +39,7 @@ alias sc="vi ~/.zshrc"
 alias scs=". ~/.zshrc"
 
 alias h="history | grep $*"
+alias ss="http_proxy=http://localhost:8123 $*"
 
 # Source tmux configuration
 tmux source-file ~/.tmux.conf
