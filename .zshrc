@@ -19,10 +19,20 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# plugins=(vi-mode)
-plugins=()
+plugins=(
+    vi-mode                     # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/vi-mode
+    history-substring-search    # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/history-substring-search
+)
 
 source $ZSH/oh-my-zsh.sh
+
+# CONFIGURATIONS OF PLUGINS
+c-history-substring-search () {
+    # bind k and j for VI mode
+    bindkey -M vicmd 'k' history-substring-search-up
+    bindkey -M vicmd 'j' history-substring-search-down
+}
+c-history-substring-search
 
 # Set language environment
 export LANG=en_US.UTF-8
