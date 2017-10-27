@@ -203,3 +203,45 @@ tmux
 |:------------------|:------------|
 | `prefix + Ctrl-s` | 保存快照 |
 | `prefix + Ctrl-r` | 恢复 |
+
+Tool Box
+=========
+
+*   [systemd](https://github.com/systemd/systemd)
+*   [i3](https://github.com/i3/i3)
+*   [dmenu](https://github.com/michaelforney/dmenu)
+*   [zsh](https://github.com/zsh-users/zsh)
+*   [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+*   [tmux](https://github.com/tmux/tmux)
+*   [vim](https://github.com/vim/vim)
+*   [git](https://github.com/git/git)
+*   [git-extras](https://github.com/tj/git-extras)
+*   [autojump](https://github.com/wting/autojump)
+*   [ack](https://github.com/beyondgrep/ack2)
+*   [zeal](https://github.com/zealdocs/zeal)
+*   [thefuck](https://github.com/nvbn/thefuck)
+*   [ss-qt5](https://github.com/shadowsocks/shadowsocks-qt5)
+*   [polipo](https://github.com/jech/polipo)
+*   [ksnapshot](https://github.com/KDE/ksnapshot)
+*   [transmission](https://github.com/transmission/transmission)
+*   [vlc](https://github.com/videolan/vlc)
+*   [mycli](https://github.com/dbcli/mycli)
+*   [ansible](https://github.com/ansible/ansible)
+*   [docker-compose](https://github.com/docker/compose)
+*   [docker](https://github.com/docker/docker-ce)
+    *   [syncthing](https://github.com/syncthing/syncthing)
+    *   [nginx](https://github.com/nginx/nginx)
+    *   [mysql](https://github.com/mysql/mysql-server)
+    *   [mongo](https://github.com/mongodb/mongo)
+    *   [redis](https://github.com/antirez/redis)
+*   [nvm](https://github.com/creationix/nvm)
+    *   [http-server](https://github.com/indexzero/http-server)
+    *   [tldr](https://github.com/tldr-pages/tldr)
+*   [gvm](https://github.com/moovweb/gvm)
+    *   [skm](https://github.com/TimothyYe/skm)
+    *   [croc](https://github.com/schollz/croc)
+    *   [geth](https://github.com/ethereum/go-ethereum)
+    *   [dep](https://github.com/golang/dep)
+    *   [delve](https://github.com/derekparker/delve)
+    *   [lf](https://github.com/gokcehan/lf)
+
