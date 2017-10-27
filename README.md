@@ -181,7 +181,7 @@ tmux
 
 | key                       | description |
 |:--------------------------|:------------|
-| `prefix y`                | 进入复制模式 |
+| `prefix Ctrl + u`         | 进入复制模式 |
 | `prefix PageUp, PageDown` | 进入复制模式，上下翻页 |
 | copy-mode: `v`            | 选择内容 |
 | copy-mode: `y`            | 复制 |
