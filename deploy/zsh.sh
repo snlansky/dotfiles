@@ -10,3 +10,4 @@ fi
 # Add configuration
 printf "Using new configuration file and adding it to ~/.zshrc\n"
 cp .zshrc ~/
+cp .Xmodmap ~/

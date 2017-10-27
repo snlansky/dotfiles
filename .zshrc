@@ -214,4 +214,8 @@ fbi-warning() {
     echo -e "${spaces}${_MESSAGE}"
     echo " "
 }
-fbi-warning
+
+# Source xmodmap
+sx () {
+    xmodmap ~/.Xmodmap
+}
