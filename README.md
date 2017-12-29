@@ -121,12 +121,15 @@ zsh
 | `alias`     | 查看别名列表 |
 | `zsh_stats` | 查看使用最频繁的命令 |
 
-待办事项
+常用脚本
 
-| command     | description      |
-|:------------|:-----------------|
-| `todo`      | 添加 |
-| `ok`        | 完成 |
+| command       | description      |
+|:--------------|:-----------------|
+| `todo`        | 添加待办事项 |
+| `ok`          | 完成待办事项 |
+| `x`           | 解压 |
+| `fs`          | 输出当前目录文件大小 |
+| `fbi-warning` | 输出 FBI WARNING |
 
 tmux
 ----
@@ -214,6 +217,7 @@ Tool Box
 *   [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 *   [tmux](https://github.com/tmux/tmux)
 *   [vim](https://github.com/vim/vim)
+*   [ctags](https://sourceforge.net/projects/ctags/)
 *   [git](https://github.com/git/git)
 *   [git-extras](https://github.com/tj/git-extras)
 *   [autojump](https://github.com/wting/autojump)
@@ -244,4 +248,6 @@ Tool Box
     *   [dep](https://github.com/golang/dep)
     *   [delve](https://github.com/derekparker/delve)
     *   [lf](https://github.com/gokcehan/lf)
+    *   [s](https://github.com/zquestz/s)
+    *   [gops](https://github.com/google/gops)
 
