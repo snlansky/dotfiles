@@ -11,4 +11,5 @@ fi
 printf "Using new configuration file and adding it to ~/.zshrc\n"
 cp .zshrc ~/
 cp .ackrc ~/
+cp .myclirc ~/
 cp .Xmodmap ~/
