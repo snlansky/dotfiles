@@ -8,22 +8,26 @@ Deploy
 
 The deployment will overwrite your configuration file, be sure to backup your existing configuration.
 
+> default backing up directory: `~/.dotfiles.backup`
+
+*   dotfiles:
+
+    ```bash
+    ./deploy/dotfiles && . ~/.zshrc
+    ```
+
+    file list: .ackrc, .gitconfig, .myclirc, .zshrc, .Xmodmap.
+
 *   i3wm:
 
     ```
-    $ ./deploy/i3wm.sh
-    ```
-
-*   zsh:
-
-    ```
-    $ ./deploy/zsh.sh && . ~/.zshrc
+    ./deploy/i3wm.sh
     ```
 
 *   tmux:
 
     ```
-    $ ./deploy/tmux.sh
+    ./deploy/tmux.sh
     ```
 
 Table Of Contents
@@ -229,6 +233,7 @@ Tool Box
 *   [ksnapshot](https://github.com/KDE/ksnapshot)
 *   [transmission](https://github.com/transmission/transmission)
 *   [vlc](https://github.com/videolan/vlc)
+*   [usql](https://github.com/xo/usql)
 *   [mycli](https://github.com/dbcli/mycli)
 *   [ansible](https://github.com/ansible/ansible)
 *   [docker-compose](https://github.com/docker/compose)
