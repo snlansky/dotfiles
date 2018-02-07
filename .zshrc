@@ -53,6 +53,13 @@ alias h="history | grep"
 alias ss="http_proxy=http://localhost:8123"
 alias gg="ss go get -v"
 
+alias dps="sudo docker ps"
+alias dpsa="sudo docker ps -a"
+alias di="sudo docker images"
+alias dl="sudo docker logs"
+alias drm="sudo docker rm"
+alias drmi="sudo docker rmi"
+
 # Source tmux configuration
 tmux source-file ~/.tmux.conf
 
