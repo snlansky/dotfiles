@@ -224,6 +224,7 @@ Tool Box
 *   [ctags](https://sourceforge.net/projects/ctags/)
 *   [git](https://github.com/git/git)
 *   [git-extras](https://github.com/tj/git-extras)
+*   [grv](https://github.com/rgburke/grv)
 *   [autojump](https://github.com/wting/autojump)
 *   [ack](https://github.com/beyondgrep/ack2)
 *   [zeal](https://github.com/zealdocs/zeal)
