@@ -7,6 +7,7 @@ dotfiles=(
   .gitconfig
   .myclirc
   .zshrc
+  .vimshrc
   .Xmodmap
 )
 
@@ -16,7 +17,7 @@ fi
 
 for i in ${dotfiles[@]};
 do
-    if [ -f "$i" ] || [ -h "$i" ]; then
+    if [ -f "$HOME/$i" ] || [ -h "$HOME/$i" ]; then
         cat "$HOME/$i" > "$bakdir/$timestr$i"
     fi
     cp "$i" "$HOME/$i"

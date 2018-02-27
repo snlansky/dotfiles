@@ -1,0 +1,4 @@
+alias c='clear'
+alias q='exit'
+alias t=':DlvTest'
+alias r=':DlvDebug -- $$args'
