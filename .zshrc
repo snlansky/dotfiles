@@ -6,7 +6,6 @@
 # 4. gvm              https://github.com/moovweb/gvm
 # 5. autojump         https://github.com/wting/autojump
 # 6. thefuck          https://github.com/nvbn/thefuck
-# 7. polipo           https://github.com/jech/polipo
 ###############################################################################
 
 # Path to oh-my-zsh installation.
@@ -50,8 +49,12 @@ alias sc="vi ~/.zshrc"
 alias scs=". ~/.zshrc"
 
 alias h="history | grep"
-alias ss="http_proxy=http://localhost:8123"
-alias gg="ss go get -v"
+
+# socks-cli
+if [ ! -d "$HOME/.socks-cli" ]; then
+  git clone https://github.com/zjx20/socks-cli $HOME/.socks-cli
+fi
+alias ss="source ~/.socks-cli/activate"
 
 alias dps="sudo docker ps"
 alias dpsa="sudo docker ps -a"
