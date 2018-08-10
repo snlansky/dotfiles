@@ -5,7 +5,7 @@
 # 3. nvm              https://github.com/creationix/nvm
 # 4. gvm              https://github.com/moovweb/gvm
 # 5. autojump         https://github.com/wting/autojump
-# 6. thefuck          https://github.com/nvbn/thefuck
+# 6. fzf              https://github.com/junegunn/fzf
 ###############################################################################
 
 # Path to oh-my-zsh installation.
@@ -64,7 +64,7 @@ alias drm="sudo docker rm"
 alias drmi="sudo docker rmi"
 
 # Source tmux configuration
-tmux source-file ~/.tmux.conf
+[ -f /tmp/tmux-1000/default ] && tmux source-file ~/.tmux.conf
 
 # Load nvm
 export NVM_DIR="$HOME/.nvm"
@@ -74,10 +74,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$HOME/.gvm/scripts/gvm" ] && \. "$HOME/.gvm/scripts/gvm"
 
 # Load autojump
-. /usr/share/autojump/autojump.sh
+[ -f /usr/share/autojump/autojump.sh ] && source /usr/share/autojump/autojump.sh
 
-# Load thefuck
-eval $(thefuck --alias)
+# Load fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Little cat
 cat="
@@ -229,3 +229,4 @@ fbi-warning() {
 sx () {
     xmodmap ~/.Xmodmap
 }
+
