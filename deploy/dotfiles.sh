@@ -9,6 +9,7 @@ dotfiles=(
   .zshrc
   .vimshrc
   .Xmodmap
+  .ansible.cfg
 )
 
 if [ ! -d "$bakdir" ]; then
