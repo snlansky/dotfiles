@@ -86,8 +86,8 @@ cat="
               )   (  _     Nothing todo.
              (__ __)//     Why don't you take a little break? \n"
 
-# A simple todo list
-todo() {
+# todo - a simple todo list
+todo () {
     test -f $HOME/.todo || touch $HOME/.todo
     if [ $# = 0 ]
     then
@@ -112,8 +112,8 @@ todo() {
     fi
 }
 
-# Finish todo item
-ok() {
+# ok - finish todo item
+ok () {
     test -f $HOME/.todo || touch $HOME/.todo
     if [ $# = 0 ]
     then
@@ -141,8 +141,8 @@ ok() {
     fi
 }
 
-# Determine size of a file or total size of a directory
-fs() {
+# fs - determine size of a file or total size of a directory
+fs () {
     if du -b /dev/null > /dev/null 2>&1; then
         local arg=-sbh;
     else
@@ -155,7 +155,7 @@ fs() {
     fi;
 }
 
-# Extract or unpack(uncompress) a compressed file
+# x - extract or unpack(uncompress) a compressed file
 x() {
     if [ -f $1 ]; then
         case $1 in
@@ -177,8 +177,8 @@ x() {
     fi;
 }
 
-# FBI warning. just for fun. :)
-fbi-warning() {
+# fbi - show FBI warning. just for fun. :)
+fbi () {
     _COLUMNS=$(tput cols)
     _MESSAGE=" FBI Warining "
     y=$(( ( $_COLUMNS - ${#_MESSAGE} )  / 2 ))
@@ -225,8 +225,49 @@ fbi-warning() {
     echo " "
 }
 
-# Source xmodmap
+# sz - source xmodmap
 sx () {
     xmodmap ~/.Xmodmap
 }
 
+# j - fzf integration with autojump
+j () {
+    if [[ "$#" -ne 0 ]]; then
+        cd $(autojump $@)
+        return
+    fi
+    cd "$(autojump -s | sed '/_____/Q; s/^[0-9,.:]*\s*//' |  fzf --height 40% --reverse --inline-info)"
+}
+
+# ch - fzf integration chrome history
+ch () {
+    local cols sep google_history open
+    cols=$(( COLUMNS / 3 ))
+    sep='{::}'
+
+    if [ "$(uname)" = "Darwin" ]; then
+        google_history="$HOME/Library/Application Support/Google/Chrome/Default/History"
+        open=open
+    else
+        google_history="$HOME/.config/google-chrome/Default/History"
+        open=xdg-open
+    fi
+    cp -f "$google_history" /tmp/h
+    sqlite3 -separator $sep /tmp/h \
+        "select substr(title, 1, $cols), url
+        from urls order by last_visit_time desc" |
+    awk -F $sep '{printf "%-'$cols's  \x1b[36m%s\x1b[m\n", $1, $2}' |
+    fzf --ansi --multi | sed 's#.*\(https*://\)#\1#' | xargs $open > /dev/null 2> /dev/null
+}
+
+# gshow - fzf integration git commit browser
+gshow () {
+    git log --graph --color=always \
+        --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
+    fzf --ansi --no-sort --reverse --tiebreak=index --bind=ctrl-s:toggle-sort \
+        --bind "ctrl-m:execute:
+                (grep -o '[a-f0-9]\{7\}' | head -1 |
+                xargs -I % sh -c 'git show --color=always % | less -R') << 'FZF-EOF'
+                {}
+                FZF-EOF"
+}
