@@ -3,6 +3,7 @@
 bakdir="$HOME/.dotfiles.backup"
 timestr=$(date +%Y%m%d%H%M)
 dotfiles=(
+  .bashrc
   .ackrc
   .gitconfig
   .myclirc
