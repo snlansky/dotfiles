@@ -37,109 +37,15 @@ c-history-substring-search
 export LANG=en_US.UTF-8
 
 # Set personal aliases
-alias c="clear"
-alias C="clear"
-
-alias gs="git status"
-alias gp="git pull"
-
-alias ns="npm start"
-
-alias sc="vi ~/.zshrc"
-alias scs=". ~/.zshrc"
-
-alias h="history | grep"
-
-# socks-cli
-if [ ! -d "$HOME/.socks-cli" ]; then
-  git clone https://github.com/zjx20/socks-cli $HOME/.socks-cli
-fi
-alias ss="source ~/.socks-cli/activate"
-
-alias dps="sudo docker ps"
-alias dpsa="sudo docker ps -a"
-alias di="sudo docker images"
-alias dl="sudo docker logs"
-alias drm="sudo docker rm"
-alias drmi="sudo docker rmi"
 
 # Source tmux configuration
 [ -f /tmp/tmux-1000/default ] && tmux source-file ~/.tmux.conf
-
-# Load nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
-# Load gvm
-[ -s "$HOME/.gvm/scripts/gvm" ] && \. "$HOME/.gvm/scripts/gvm"
 
 # Load autojump
 [ -f /usr/share/autojump/autojump.sh ] && source /usr/share/autojump/autojump.sh
 
 # Load fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Little cat
-cat="
-              /\\_/\\
-            =( °w° )=
-              )   (  _     Nothing todo.
-             (__ __)//     Why don't you take a little break? \n"
-
-# todo - a simple todo list
-todo () {
-    test -f $HOME/.todo || touch $HOME/.todo
-    if [ $# = 0 ]
-    then
-        if [[ ! -s $HOME/.todo ]]
-        then
-            echo $cat
-        else
-            cat -n $HOME/.todo
-        fi
-    elif [ $1 = -h ] || [ $1 = --help ]
-    then
-        echo '\ntodo - a simple TODO list\n'
-        echo 'Usage: todo [-h] [content]'
-        echo 'Option:'
-        echo '    -h --help       Print usage'
-        echo 'Example:'
-        echo '    $ todo'
-        echo '    $ todo eat your own dog food'
-        echo '    $ todo --help\n'
-    else
-        echo $@ >> $HOME/.todo
-    fi
-}
-
-# ok - finish todo item
-ok () {
-    test -f $HOME/.todo || touch $HOME/.todo
-    if [ $# = 0 ]
-    then
-        if [[ ! -s $HOME/.todo ]]
-        then
-            echo $cat
-        else
-            cat -n $HOME/.todo
-            echo -ne "\n     Type a number to remove: "
-            read NUMBER
-            sed -ie ${NUMBER}d $HOME/.todo
-        fi
-    elif [ $1 = -h ] || [ $1 = --help ]
-    then
-        echo '\nok - finish TODO item\n'
-        echo 'Usage: ok [-h] [number]'
-        echo 'Option:'
-        echo '    -h --help       Print usage'
-        echo 'Example:'
-        echo '    $ ok'
-        echo '    $ ok 2'
-        echo '    $ ok --help\n'
-    else
-        sed -ie $1d $HOME/.todo
-    fi
-}
 
 # fs - determine size of a file or total size of a directory
 fs () {
@@ -175,59 +81,6 @@ x() {
     else
         echo "'$1' is not a valid file";
     fi;
-}
-
-# fbi - show FBI warning. just for fun. :)
-fbi () {
-    _COLUMNS=$(tput cols)
-    _MESSAGE=" FBI Warining "
-    y=$(( ( $_COLUMNS - ${#_MESSAGE} )  / 2 ))
-    spaces=$(printf "%-${y}s" " ")
-
-    echo " "
-    echo -e "${spaces}\033[41;37;5m FBI WARNING \033[0m"
-    echo " "
-    _COLUMNS=$(tput cols)
-    _MESSAGE="Ferderal Law provides severe civil and criminal penalties for"
-    y=$(( ( $_COLUMNS - ${#_MESSAGE} )  / 2 ))
-    spaces=$(printf "%-${y}s" " ")
-    echo -e "${spaces}${_MESSAGE}"
-
-    _COLUMNS=$(tput cols)
-    _MESSAGE="the unauthorized reproduction, distribution, or exhibition of"
-    y=$(( ( $_COLUMNS - ${#_MESSAGE} )  / 2 ))
-    spaces=$(printf "%-${y}s" " ")
-    echo -e "${spaces}${_MESSAGE}"
-
-    _COLUMNS=$(tput cols)
-    _MESSAGE="copyrighted motion pictures (Title 17, United States Code,"
-    y=$(( ( $_COLUMNS - ${#_MESSAGE} )  / 2 ))
-    spaces=$(printf "%-${y}s" " ")
-    echo -e "${spaces}${_MESSAGE}"
-
-    _COLUMNS=$(tput cols)
-    _MESSAGE="Sections 501 and 508). The Federal Bureau of Investigation"
-    y=$(( ( $_COLUMNS - ${#_MESSAGE} )  / 2 ))
-    spaces=$(printf "%-${y}s" " ")
-    echo -e "${spaces}${_MESSAGE}"
-
-    _COLUMNS=$(tput cols)
-    _MESSAGE="investigates allegations of criminal copyright infringement"
-    y=$(( ( $_COLUMNS - ${#_MESSAGE} )  / 2 ))
-    spaces=$(printf "%-${y}s" " ")
-    echo -e "${spaces}${_MESSAGE}"
-
-    _COLUMNS=$(tput cols)
-    _MESSAGE="(Title 17, United States Code, Section 506)."
-    y=$(( ( $_COLUMNS - ${#_MESSAGE} )  / 2 ))
-    spaces=$(printf "%-${y}s" " ")
-    echo -e "${spaces}${_MESSAGE}"
-    echo " "
-}
-
-# sz - source xmodmap
-sx () {
-    xmodmap ~/.Xmodmap
 }
 
 # j - fzf integration with autojump
@@ -271,3 +124,43 @@ gshow () {
                 {}
                 FZF-EOF"
 }
+
+alias cls=clear
+alias c="clear"
+alias dc='docker-compose'
+alias di='docker images'
+alias dps='docker ps'
+alias dpsa='docker ps -a'
+alias dl='docker logs'
+alias df='docker logs -f'
+alias dft='docker logs -f -t --tail=100'
+alias dr='docker exec -it'
+alias gop='cd /opt/gopath/src'
+alias gof='cd /opt/gopath/src/github.com/hyperledger/fabric'
+alias gc='git checkout . && git clean -xdf'
+alias drma='docker stop $(docker ps -q) & docker rm $(docker ps -aq)'
+alias untar='tar -zxvf '
+alias www='python -m SimpleHTTPServer 8000'
+alias ipe='curl ipinfo.io/ip'
+alias ipi='ipconfig getifaddr en0'
+alias ssh-test='ssh ubuntu@test'
+alias sz='source ~/.zshrc'
+
+export GOPATH="/opt/gopath"
+export GOROOT="/opt/go"
+PATH=$GOROOT/bin:$GOPATH/bin:$PATH
+
+JAVA_HOME=/usr/java/latest
+JRE_HOME=$JAVA_HOME/jre
+PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
+CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib
+export JAVA_HOME JRE_HOME PATH CLASSPATH
+
+export RUSTPATH="/home/snlan/.cargo"
+PATH=$PATH:$RUSTPATH/bin
+export PATH
+KBAAS_BIN_PATH="/opt/gopath/src/kchain.com/kbaas/.build/bin"
+FABIRC_BIN_PATH="/opt/gopath/src/github.com/hyperledger/fabric/.build/bin"
+PATH=$PATH:$FABIRC_BIN_PATH:$KBAAS_BIN_PATH
+export PATH
+export FABRIC_CFG_PATH="/opt/gopath/src/github.com/hyperledger/fabric/sampleconfig"
