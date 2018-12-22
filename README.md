@@ -1,9 +1,9 @@
-dotfiles
+linux config
 ========
 
-Dotfiles of my development environment. Working with Linux.
+config of my development environment. Working with Linux.
 
-Deploy
+config
 ------
 
 The deployment will overwrite your configuration file, be sure to backup your existing configuration.
@@ -177,8 +177,8 @@ tmux
 | `prefix │`              | 左右分割 |
 | `prefix _`              | 上下分割 |
 | `prefix k,j,h,l`        | 上下左右切换窗格 |
-| `Ctrl + k,j,h,l`        | 上下左右切换窗格 |
-| `prefix Ctrl + k,j,h,l` | 上下左右调整窗格大小 |
+| `Ctrl + i,k,j,l`        | 上下左右切换窗格 |
+| `prefix Ctrl + i,k,j,l` | 上下左右调整窗格大小 |
 | `prefix o`              | 切换到下一个窗格 |
 | `prefix z`              | 最大化/取消最大化当前窗格 |
 | `prefix x`              | 关闭当前窗格 |
