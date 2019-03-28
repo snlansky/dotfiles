@@ -6,11 +6,8 @@ dotfiles=(
   .bashrc
   .ackrc
   .gitconfig
-  .myclirc
   .zshrc
   .vimshrc
-  .Xmodmap
-  .ansible.cfg
   .ctags
 )
 
