@@ -12,7 +12,7 @@ The deployment will overwrite your configuration file, be sure to backup your ex
 
     default backing up directory: `~/.dotfiles.backup`
 
-    file list: `.bashrc`, `.ackrc`, `.gitconfig`, `.myclirc`, `.zshrc`, `.vimshrc`, `.Xmodmap`, `.ansible.cfg`, `.ctags`
+    file list: `.bashrc`, `.ackrc`, `.gitconfig`, `.myclirc`, `.zshrc`, `.vimshrc`, `.ctags`
 
     ```bash
     make dotfiles && . ~/.zshrc
