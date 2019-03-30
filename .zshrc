@@ -143,7 +143,7 @@ alias untar='tar -zxvf '
 alias www='python -m SimpleHTTPServer 8000'
 alias ipe='curl ipinfo.io/ip'
 alias ipi='ipconfig getifaddr en0'
-alias ssh-test='ssh ubuntu@test'
+alias time-date='date && cal'
 alias sz='source ~/.zshrc'
 
 export GOPATH="/opt/gopath"
