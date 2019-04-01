@@ -83,6 +83,11 @@ x() {
     fi;
 }
 
+# sz - source xmodmap
+sx () {
+    xmodmap ~/.Xmodmap
+}
+
 # j - fzf integration with autojump
 j () {
     if [[ "$#" -ne 0 ]]; then
