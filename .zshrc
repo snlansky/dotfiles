@@ -130,25 +130,29 @@ gshow () {
                 FZF-EOF"
 }
 
+alias ll='ls -l'
 alias cls=clear
 alias c="clear"
 alias dc='docker-compose'
 alias di='docker images'
 alias dps='docker ps'
 alias dpsa='docker ps -a'
-alias dl='docker logs'
-alias df='docker logs -f'
-alias dft='docker logs -f -t --tail=100'
-alias dr='docker exec -it'
+alias dlg='docker logs'
+alias dlgf='docker logs -f'
+alias dlgt='docker logs -f -t --tail=100'
+alias dexc='docker exec -it'
 alias gop='cd /opt/gopath/src'
-alias gof='cd /opt/gopath/src/github.com/hyperledger/fabric'
 alias gc='git checkout . && git clean -xdf'
+alias gst='git status'
+alias grset='git reset --hard HEAD'
 alias drma='docker stop $(docker ps -q) & docker rm $(docker ps -aq)'
 alias untar='tar -zxvf '
 alias www='python -m SimpleHTTPServer 8000'
 alias ipe='curl ipinfo.io/ip'
-alias ipi='ipconfig getifaddr en0'
 alias time-date='date && cal'
+alias ew='emacs -nw'
+alias netst='sudo netstat -tunlp | grep '
+
 alias sz='source ~/.zshrc'
 
 export GOPATH="/opt/gopath"
