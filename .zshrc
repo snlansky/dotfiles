@@ -62,7 +62,7 @@ fs () {
 }
 
 # x - extract or unpack(uncompress) a compressed file
-x() {
+ex() {
     if [ -f $1 ]; then
         case $1 in
             *.tar)       tar xvf $1;;
