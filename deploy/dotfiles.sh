@@ -8,7 +8,6 @@ dotfiles=(
   .gitconfig
   .zshrc
   .vimshrc
-  .Xmodmap
   .ctags
 )
 
