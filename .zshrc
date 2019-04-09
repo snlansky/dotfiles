@@ -173,3 +173,5 @@ FABIRC_BIN_PATH="/opt/gopath/src/github.com/hyperledger/fabric/.build/bin"
 PATH=$PATH:$FABIRC_BIN_PATH:$KBAAS_BIN_PATH
 export PATH
 export FABRIC_CFG_PATH="/opt/gopath/src/github.com/hyperledger/fabric/sampleconfig"
+
+export PATH="/home/snlan/.cask/bin:$PATH"
