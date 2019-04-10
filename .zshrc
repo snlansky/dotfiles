@@ -159,11 +159,11 @@ export GOPATH="/opt/gopath"
 export GOROOT="/opt/go"
 PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 
-JAVA_HOME=/usr/java/latest
-JRE_HOME=$JAVA_HOME/jre
-PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
-CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib
-export JAVA_HOME JRE_HOME PATH CLASSPATH
+#JAVA_HOME=/usr/java/latest
+#JRE_HOME=$JAVA_HOME/jre
+#PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
+#CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib
+#export JAVA_HOME JRE_HOME PATH CLASSPATH
 
 export RUSTPATH="/home/snlan/.cargo"
 PATH=$PATH:$RUSTPATH/bin
