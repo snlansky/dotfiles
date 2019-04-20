@@ -155,23 +155,23 @@ alias netst='sudo netstat -tunlp | grep '
 
 alias sz='source ~/.zshrc'
 
+# set go path
 export GOPATH="/opt/gopath"
 export GOROOT="/opt/go"
 PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 
-#JAVA_HOME=/usr/java/latest
-#JRE_HOME=$JAVA_HOME/jre
-#PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
-#CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib
-#export JAVA_HOME JRE_HOME PATH CLASSPATH
-
-export RUSTPATH="/home/snlan/.cargo"
+# set rust path
+export RUSTPATH=$HOME/.cargo
 PATH=$PATH:$RUSTPATH/bin
-export PATH
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+
+# set cask path
+PATH=$PATH:$HOME/.cask/bin
+
 KBAAS_BIN_PATH="/opt/gopath/src/kchain.com/kbaas/.build/bin"
 FABIRC_BIN_PATH="/opt/gopath/src/github.com/hyperledger/fabric/.build/bin"
 PATH=$PATH:$FABIRC_BIN_PATH:$KBAAS_BIN_PATH
-export PATH
+
 export FABRIC_CFG_PATH="/opt/gopath/src/github.com/hyperledger/fabric/sampleconfig"
 
-export PATH="/home/snlan/.cask/bin:$PATH"
+export PATH
