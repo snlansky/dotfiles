@@ -156,14 +156,24 @@ alias netst='sudo netstat -tunlp | grep '
 alias sz='source ~/.zshrc'
 
 # set go path
-export GOPATH="/opt/gopath"
-export GOROOT="/opt/go"
+export GOPATH=/opt/gopath
+export GOROOT=/opt/go
 PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 
 # set rust path
 export RUSTPATH=$HOME/.cargo
 PATH=$PATH:$RUSTPATH/bin
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+
+# set java path
+JAVA_HOME=/home/snlan/java/jdk1.8.0_212
+JRE_HOME=$JAVA_HOME/jre
+PATH=$PATH:$JAVA_HOME/bin
+CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export JAVA_HOME
+export JRE_HOME
+export CLASSPATH
+
 
 # set cask path
 PATH=$PATH:$HOME/.cask/bin
