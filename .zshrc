@@ -158,6 +158,9 @@ alias grmidea='git rm -r --cached .idea'
 
 alias sz='source ~/.zshrc'
 
+# set kubectl command line completion
+source <(kubectl completion zsh)
+
 # set go path
 export GOPATH=/opt/gopath
 export GOROOT=/opt/go
