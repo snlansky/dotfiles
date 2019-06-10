@@ -181,6 +181,10 @@ export JAVA_HOME
 export JRE_HOME
 export CLASSPATH
 
+# set mevan
+export M2_HOME=/usr/local/apache-maven-3.6.1
+PATH=${M2_HOME}/bin:$PATH
+
 # set cask path
 PATH=$PATH:$HOME/.cask/bin
 
