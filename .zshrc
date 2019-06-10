@@ -165,7 +165,7 @@ source <(kubectl completion zsh)
 # set go path
 export GOPATH=/opt/gopath
 export GOROOT=/opt/go
-export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # set rust path
 export RUSTPATH=$HOME/.cargo
@@ -180,7 +180,7 @@ export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
 
 # set mevan
 export M2_HOME=/usr/local/apache-maven-3.6.1
-export PATH=${M2_HOME}/bin:$PATH
+export PATH=$PATH:${M2_HOME}/bin
 
 # set cask path
 export PATH=$PATH:$HOME/.cask/bin
