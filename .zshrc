@@ -155,7 +155,6 @@ alias time-date='date && cal'
 alias ew='emacs -nw'
 alias netst='sudo netstat -tunlp | grep '
 alias kb=kubectl
-alias kba='kubectl --all-namespaces'
 alias grmidea='git rm -r --cached .idea'
 
 alias sz='source ~/.zshrc'
