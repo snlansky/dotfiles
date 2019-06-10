@@ -165,33 +165,26 @@ source <(kubectl completion zsh)
 # set go path
 export GOPATH=/opt/gopath
 export GOROOT=/opt/go
-PATH=$GOROOT/bin:$GOPATH/bin:$PATH
+export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 
 # set rust path
 export RUSTPATH=$HOME/.cargo
-PATH=$PATH:$RUSTPATH/bin
+export PATH=$PATH:$RUSTPATH/bin
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
 # set java path
-JAVA_HOME=/home/snlan/java/jdk1.8.0_212
-JRE_HOME=$JAVA_HOME/jre
-PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
-CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib
-export JAVA_HOME
-export JRE_HOME
-export CLASSPATH
+export JAVA_HOME=/home/snlan/java/jdk1.8.0_212
+export JRE_HOME=$JAVA_HOME/jre
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib
+export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
 
 # set mevan
 export M2_HOME=/usr/local/apache-maven-3.6.1
-PATH=${M2_HOME}/bin:$PATH
+export PATH=${M2_HOME}/bin:$PATH
 
 # set cask path
-PATH=$PATH:$HOME/.cask/bin
-
-KBAAS_BIN_PATH="/opt/gopath/src/kchain.com/kbaas/.build/bin"
-FABIRC_BIN_PATH="/opt/gopath/src/github.com/hyperledger/fabric/.build/bin"
-PATH=$PATH:$FABIRC_BIN_PATH:$KBAAS_BIN_PATH
+export PATH=$PATH:$HOME/.cask/bin
 
 export FABRIC_CFG_PATH="/opt/gopath/src/github.com/hyperledger/fabric/sampleconfig"
-
-export PATH
+export FABIRC_BIN_PATH="/opt/gopath/src/github.com/hyperledger/fabric/.build/bin"
+export PATH=$PATH:$FABIRC_BIN_PATH
