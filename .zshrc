@@ -156,6 +156,7 @@ alias ew='emacs -nw'
 alias netst='sudo netstat -tunlp | grep '
 alias kb=kubectl
 alias grmidea='git rm -r --cached .idea'
+alias r=ranger
 
 alias sz='source ~/.zshrc'
 
