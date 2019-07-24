@@ -164,6 +164,7 @@ alias sz='source ~/.zshrc'
 source <(kubectl completion zsh)
 
 # set go path
+export GO111MODULE=on
 export GOPATH=/opt/gopath
 export GOROOT=/opt/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
