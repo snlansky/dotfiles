@@ -21,4 +21,8 @@ i3wm:
 bashrc:
 	ansible-playbook -i inventory playbook.yml
 
+config:
+	mv ~/.config/user-dirs.dirs ~/.config/user-dirs.dirs.bak
+	cp -f .config/user-dirs.dirs ~/.config
+
 .PHONY: all help dotfiles tmux i3wm ssh bashrc
