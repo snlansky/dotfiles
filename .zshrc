@@ -6,6 +6,7 @@
 # 4. gvm              https://github.com/moovweb/gvm
 # 5. autojump         https://github.com/wting/autojump
 # 6. fzf              https://github.com/junegunn/fzf
+# 7. antigne          https://github.com/zsh-users/antigen
 ###############################################################################
 
 # Path to oh-my-zsh installation.
