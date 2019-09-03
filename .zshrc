@@ -171,6 +171,7 @@ alias kb=kubectl
 alias grmidea='git rm -r --cached .idea'
 alias r=ranger
 alias gcp='gcloud compute os-login describe-profile'
+alias gm=goreman
 
 alias sz='source ~/.zshrc'
 
