@@ -172,6 +172,8 @@ alias grmidea='git rm -r --cached .idea'
 alias r=ranger
 alias gcp='gcloud compute os-login describe-profile'
 alias gm=goreman
+alias targz='tar -zcvf'
+alias untar='tar -zxvf'
 
 alias sz='source ~/.zshrc'
 
