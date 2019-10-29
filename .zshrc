@@ -174,6 +174,7 @@ alias gcp='gcloud compute os-login describe-profile'
 alias gm=goreman
 alias targz='tar -zcvf'
 alias untar='tar -zxvf'
+alias cargotest='cargo test -- --nocapture'
 
 alias sz='source ~/.zshrc'
 
