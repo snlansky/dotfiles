@@ -176,6 +176,7 @@ alias targz='tar -zcvf'
 alias untar='tar -zxvf'
 alias cargotest='cargo test -- --nocapture'
 alias kbp='kubectl get pods --output wide --all-namespaces'
+alias kbc='export KUBECONFIG=~/.kube/config'
 
 alias sz='source ~/.zshrc'
 
