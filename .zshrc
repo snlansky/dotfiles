@@ -175,7 +175,7 @@ alias gcp='gcloud compute os-login describe-profile'
 alias gm=goreman
 alias targz='tar -zcvf'
 alias untar='tar -zxvf'
-alias cargotest='cargo test -- --nocapture'
+alias cargotest='cargo test -- --nocapture --test-threads=1'
 alias cargofix='cargo fix'
 alias kbp='kubectl get pods --output wide --all-namespaces'
 alias kbc='export KUBECONFIG=~/.kube/config'
