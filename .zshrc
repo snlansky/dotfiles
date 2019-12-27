@@ -189,7 +189,8 @@ source <(kubectl completion zsh)
 
 # set go path
 export GO111MODULE=on
-export GOPROXY="https://mirrors.aliyun.com/goproxy/"
+# export GOPROXY="https://mirrors.aliyun.com/goproxy/"
+export GOPROXY=https://goproxy.io
 export GOPATH=/opt/gopath
 export GOROOT=/opt/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
