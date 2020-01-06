@@ -175,6 +175,7 @@ alias grmidea='git rm -r --cached .idea'
 alias r=ranger
 alias gcp='gcloud compute os-login describe-profile'
 alias gm=goreman
+alias gfmt='gofmt -s -w .'
 alias targz='tar -zcvf'
 alias untar='tar -zxvf'
 alias cargotest='cargo test -- --nocapture --test-threads=1'
