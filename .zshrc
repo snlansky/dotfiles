@@ -134,6 +134,9 @@ gshow () {
 # more then autojump
 eval "$(fasd --init auto)"
 
+# https://github.com/starship/starship 
+eval "$(starship init zsh)"
+
 alias a='fasd -a'        # any
 alias s='fasd -si'       # show / search / select
 alias d='fasd -d'        # directory
