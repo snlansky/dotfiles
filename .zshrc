@@ -135,7 +135,7 @@ gshow () {
 eval "$(fasd --init auto)"
 
 # https://github.com/starship/starship 
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 
 alias a='fasd -a'        # any
 alias s='fasd -si'       # show / search / select
