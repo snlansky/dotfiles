@@ -203,6 +203,7 @@ export RUSTPATH=$HOME/.cargo
 export PATH=$PATH:$RUSTPATH/bin
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
+export RUST_LOG=debug
 
 # set java path
 export JAVA_HOME=/home/snlan/java/jdk1.8.0_212
