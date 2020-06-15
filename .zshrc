@@ -189,6 +189,7 @@ alias kbc='export KUBECONFIG=~/.kube/config'
 alias kba='kubectl get pods --all-namespaces'
 alias kbl='kubectl logs -f'
 alias kbe='kubectl exec -it'
+alias kbs='kubectl get svc --all-namespaces'
 
 alias sz='source ~/.zshrc'
 
