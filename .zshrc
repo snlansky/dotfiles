@@ -186,6 +186,9 @@ alias cargotest='cargo test -- --nocapture --test-threads=1'
 alias cargofix='cargo fix'
 alias kbp='kubectl get pods --output wide --all-namespaces'
 alias kbc='export KUBECONFIG=~/.kube/config'
+alias kba='kubectl get pods --all-namespaces'
+alias kbl='kubectl logs -f'
+alias kbe='kubectl exec -it'
 
 alias sz='source ~/.zshrc'
 
