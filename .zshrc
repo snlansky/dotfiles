@@ -182,14 +182,18 @@ alias gm=goreman
 alias gfmt='gofmt -s -w .'
 alias targz='tar -zcvf'
 alias untar='tar -zxvf'
-alias cargotest='cargo test -- --nocapture --test-threads=1'
+alias cargotest='cargo test -- --nocapture --test-threads=10'
 alias cargofix='cargo fix'
-alias kbp='kubectl get pods --output wide --all-namespaces'
+
 alias kbc='export KUBECONFIG=~/.kube/config'
+alias kbp='kubectl get pods --output wide --all-namespaces'
 alias kba='kubectl get pods --all-namespaces'
+alias kbs='kubectl get svc --all-namespaces'
+alias kbd='kubectl get deployment --all-namespaces'
+alias kbv='kubectl get pvc --all-namespaces'
 alias kbl='kubectl logs -f'
 alias kbe='kubectl exec -it'
-alias kbs='kubectl get svc --all-namespaces'
+
 
 alias sz='source ~/.zshrc'
 
