@@ -175,11 +175,10 @@ alias time-date='date && cal'
 alias ew='emacs -nw'
 alias netst='sudo netstat -tunlp | grep '
 alias kb=kubectl
-alias grmidea='git rm -r --cached .idea'
 alias r=ranger
 alias gcp='gcloud compute os-login describe-profile'
 alias gm=goreman
-alias gfmt='gofmt -s -w .'
+alias fmt='go fmt $(go list ./... | grep -v /vendor/)'
 alias targz='tar -zcvf'
 alias untar='tar -zxvf'
 alias cargotest='cargo test -- --nocapture --test-threads=10'
