@@ -209,7 +209,7 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 # set rust path
 export RUSTPATH=$HOME/.cargo
 export PATH=$PATH:$RUSTPATH/bin
-export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/library"
 export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
 export RUST_LOG=debug
 
