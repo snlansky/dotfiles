@@ -192,7 +192,7 @@ alias kbd='kubectl get deployment --all-namespaces'
 alias kbv='kubectl get pvc --all-namespaces'
 alias kbl='kubectl logs -f'
 alias kbe='kubectl exec -it'
-
+alias open=nautilus
 
 alias sz='source ~/.zshrc'
 
