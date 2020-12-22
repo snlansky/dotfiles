@@ -1,3 +1,7 @@
 [user]
 	email = snlan@live.cn
 	name = snlansky
+[core]
+	editor = vim
+[pull]
+	rebase = true
